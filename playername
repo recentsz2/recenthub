@@ -1,0 +1,12 @@
+            local Target = getgenv().pn
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
+       end,
+    })
+
+    local Input = Tab:CreateInput({
+        Name = "Target Player",
+        PlaceholderText = "Insert Player Name",
+        RemoveTextAfterFocusLost = false,
+        Callback = function(Text)
+            getgenv().pn = Text
+        end,
